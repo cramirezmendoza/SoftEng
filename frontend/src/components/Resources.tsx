@@ -62,7 +62,7 @@ const ResourceCard = ({ resource, onDelete ,is_superuser}: ResourceCardProps) =>
     <div
       ref={cardRef}
       style={{
-        background: "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)", // Linear gradient
+        background: "linear-gradient(135deg,rgb(178, 122, 137)  0%, #860038 100%)", // Linear gradient
         borderRadius: "12px", // Optional: Add rounded corners
         color: "white", // Ensure text is readable
       }}

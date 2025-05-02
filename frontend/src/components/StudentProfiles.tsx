@@ -74,7 +74,7 @@ const StudentProfiles = () => {
   return (
     <section 
       id="community" 
-      className="bg-gradient-to-b from-blue-50 to-white py-24"
+      className="bg-gradient-to-b from-[#fbe8f0] to-white py-24"
     >
       <div className="container mx-auto px-6">
         <div className="mb-16 text-center">

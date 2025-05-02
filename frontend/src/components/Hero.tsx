@@ -12,10 +12,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-blue-50 to-white pt-24 pb-16">
-      <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-b from-blue-100/40 to-transparent"></div>
+    <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-[#fbe8f0] to-white pt-24 pb-16">
+      <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-b from-[#f5d1df]/50 to-transparent"></div>
       <div className="absolute -top-10 -right-10 h-64 w-64 rounded-full bg-blue-200/20 blur-3xl"></div>
-      <div className="absolute top-40 -left-10 h-64 w-64 rounded-full bg-blue-200/30 blur-3xl"></div>
+      <div className="absolute top-40 -left-10 h-64 w-64 rounded-full bg-[#f2c6d8]/40 blur-3xl"></div>
       <div className="container relative mx-auto px-6 py-24 md:py-32">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div className="space-y-8">
@@ -88,14 +88,14 @@ const Hero = () => {
             )}
           >
             <div className="glass-panel h-full w-full overflow-hidden p-1">
-              <div className="h-full w-full rounded-xl bg-gray-200 overflow-hidden flex items-center justify-center">
+              <div className="h-full w-full rounded-xl bg-[#860038] overflow-hidden flex items-center justify-center">
                 <div className="text-gray-400 text-center px-8">
-                  <video autoPlay loop muted className="w-full h-auto" src="https://videos.pexels.com/video-files/3209298/3209298-uhd_2560_1440_25fps.mp4"></video>
+                  <video autoPlay loop muted className="w-full h-auto" src="/csudh.mp4"></video>
                 </div>
               </div>
             </div>
 
-            <div className="absolute -top-4 -right-4 h-24 w-24 rounded-xl bg-blue-100 animate-float"></div>
+            <div className="absolute -top-4 -right-4 h-24 w-24 rounded-xl bg-[#EFBA08] animate-float"></div>
             <div
               className="absolute -bottom-6 -left-6 h-32 w-32 rounded-xl bg-primary/10 animate-float"
               style={{ animationDelay: "1s" }}

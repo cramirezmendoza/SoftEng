@@ -14,16 +14,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    --primary: 221 83% 53%;
+    --primary: 336 100% 26%; /* Burgundy */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 46 85% 48%; /* Yellow */
     --secondary-foreground: 240 5.9% 10%;
 
-    --muted: 240 4.8% 95.9%;
+    --muted: 210 2% 48%; /* Gray */
     --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 221 83% 53%;
+    --accent: 336 100% 26%;
     --accent-foreground: 240 5.9% 10%;
 
     --destructive: 0 84.2% 60.2%;
