@@ -41,15 +41,31 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/profile" element={<PrivateRoute isAuthenticated={isAuthenticated}>
-              <Profile />
-            </PrivateRoute>} />
-            <Route path="/chat" element={<PrivateRoute isAuthenticated={isAuthenticated}>
-              <Chat />
-            </PrivateRoute>} />
-            <Route path="/calendar" element={<PrivateRoute isAuthenticated={isAuthenticated}>
-              <CalendarPage />
-            </PrivateRoute>} />
+            <Route
+              path="/profile"
+              element={
+                <PrivateRoute isAuthenticated={isAuthenticated}>
+                  <Profile />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/chat"
+              element={
+                <PrivateRoute isAuthenticated={isAuthenticated}>
+                  <Chat />
+                </PrivateRoute>
+              }
+            />
+
+            <Route
+              path="/calendar"
+              element={
+                <PrivateRoute isAuthenticated={isAuthenticated}>
+                  <CalendarPage />
+                </PrivateRoute>
+              }
+            />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

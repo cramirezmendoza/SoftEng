@@ -47,7 +47,14 @@ class UpcomingEventSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class ProfileDetailsSerializer(serializers.ModelSerializer):
-    user = UserSerializer(read_only=True)
     class Meta:
         model = Profile
-        fields = '__all__'
+        fields = [
+            'name',
+            'description',
+            'profile_picture',
+            'address',
+            'designation',
+            'department',
+            'interests',
+        ]

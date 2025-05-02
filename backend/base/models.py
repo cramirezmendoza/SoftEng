@@ -52,7 +52,7 @@ class ProfileDetails(models.Model):
     description = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        return self.user.username
+        return self.name or "Unnamed ProfileDetails"
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
@@ -65,4 +65,4 @@ class Profile(models.Model):
     interests = models.JSONField(default=list, blank=True, null=True) 
 
     def __str__(self):
-        return self.user.username
+        return self.user.username if self.user else "Anonymous"

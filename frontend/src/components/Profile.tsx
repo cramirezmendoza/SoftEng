@@ -90,7 +90,7 @@ const ProfilePage = ({ user = defaultUser }: ProfilePageProps) => {
           setProfile(profileData);
           setName(profileData.name || "");
           setDescription(profileData.description || "");
-          setFile(profileData.profile_picture || null);
+          // setFile(profileData.profile_picture || null);
           setAddress(profileData.address || "");
           setDesignation(profileData.designation || "");
           setInterests(
@@ -127,7 +127,8 @@ const ProfilePage = ({ user = defaultUser }: ProfilePageProps) => {
       setProfile(updatedProfile);
       setName(updatedProfile.name || "");
       setDescription(updatedProfile.description || "");
-      setFile(updatedProfile.profile_picture || null);
+      //setFile(updatedProfile.profile_picture || null);
+      setFile(null);
       setAddress(updatedProfile.address || "");
       setDesignation(updatedProfile.designation || "");
       setInterests(
@@ -154,7 +155,8 @@ const ProfilePage = ({ user = defaultUser }: ProfilePageProps) => {
               <CardHeader className="profile-header">
                 <div className="profile-avatar-wrapper">
                   <Avatar className="profile-avatar">
-                      <AvatarFallback>{profile.name.charAt(0)}</AvatarFallback>
+                    <AvatarImage src={`http://127.0.0.1:8000${profile.profile_picture}`} alt="Profile" />
+                    <AvatarFallback>{profile.name?.charAt(0) || "?"}</AvatarFallback>
                    </Avatar>
                 </div>
 

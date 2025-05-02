@@ -97,15 +97,15 @@ export const logout =async()=>{
     }
 }
 
-export const is_authenticated =async()=>{
+export const is_authenticated = async () => {
     try {
-       const response = await axios.get(AUTH_URL, {},{ withCredentials: true });
+        const response = await axios.get(AUTH_URL, { withCredentials: true });
         return response.data;
+    } catch (error) {
+        console.error("Auth check failed:", error);
+        return false;
     }
-    catch(error){
-        return false
-    }
-}
+};
 
 export const upload_resource = async (formData) => {
     try {

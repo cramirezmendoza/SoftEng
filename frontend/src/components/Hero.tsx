@@ -68,10 +68,10 @@ const Hero = () => {
               )}
             >
               <div className="flex -space-x-2">
-                 {["A", "S", "D", "F"].map((i) => (
-                  <Avatar className="profile-avatar">
+              {["A", "S", "D", "F"].map((i) => (
+                  <Avatar key={i} className="profile-avatar">
                     <AvatarFallback>{i}</AvatarFallback>
-                </Avatar> 
+                  </Avatar>
                 ))}
               </div>
               <span>

@@ -38,8 +38,14 @@ def register(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def is_authenticated(request):
-    return Response({'authenticated': True, 'is_superuser': request.user.is_superuser, 'is_staff': request.user.is_staff})
-
+    user = request.user
+    return Response({
+        'authenticated': True,
+        'username': user.username,
+        'is_admin': user.is_superuser or user.is_staff,
+        'is_superuser': user.is_superuser,
+        'is_staff': user.is_staff
+    })
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
@@ -176,6 +182,7 @@ def update_profile(request, pk=None):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_200_OK)
     print(f"Validation errors: {serializer.errors}")
+    print("❌ Validation errors:", serializer.errors)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET'])
@@ -186,8 +193,9 @@ def get_profile(request, pk=None):
         profile = Profile.objects.get(user=request.user)
         print(f"Profile found: {profile}")
     except Profile.DoesNotExist:
-        print(f"Profile with pk {pk} does not exist")
-        return Response({"error": "Profile not found"}, status=status.HTTP_404_NOT_FOUND)
+        # ✅ Create a new empty profile if it doesn't exist
+        profile = Profile.objects.create(user=request.user)
+        print(f"New profile created for user: {request.user.username}")
 
     serializer = ProfileDetailsSerializer(profile)
     return Response(serializer.data, status=status.HTTP_200_OK)
