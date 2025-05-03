@@ -1,7 +1,11 @@
 install gitbash
+
 install postman
+
 install vscode
+
 install python
+
 install nodejs
 
 git clone https://github.com/cramirezmendoza/SoftEng.git
@@ -26,7 +30,9 @@ pip install djangorestframework-simplejwt
 pip install Django
 pip install pusher
 
-optional  for migration
+* if youre in mac use pip3
+
+# For authentication 
 python ./manage.py makemigration
 python ./manage.py migrate
 
@@ -50,7 +56,7 @@ npm install
 # Run the app
 npm start
 --once server is running then
-localhost:3000/login
+localhost:8000/login for Django admin panel
 
 # Note
 Need Separate Terminal in Vscode for Backend and Frontend to run locally
